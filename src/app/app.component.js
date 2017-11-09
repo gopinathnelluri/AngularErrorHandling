@@ -7,11 +7,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 var core_1 = require("@angular/core");
 var AuthorizationError_1 = require("./AuthorizationError");
+var UserNotFoundError_1 = require("./UserNotFoundError");
 var AppComponent = (function () {
     function AppComponent() {
     }
     AppComponent.prototype.throwCustomError = function () {
         throw new AuthorizationError_1.AuthorizationError();
+    };
+    AppComponent.prototype.throwUserError = function () {
+        throw new UserNotFoundError_1.UserNotFoundError();
+    };
+    AppComponent.prototype.throwError = function () {
+        throw new Error();
     };
     return AppComponent;
 }());

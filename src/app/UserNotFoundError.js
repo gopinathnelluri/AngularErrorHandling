@@ -4,18 +4,18 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var AuthorizationError = (function (_super) {
-    __extends(AuthorizationError, _super);
+var UserNotFoundError = (function (_super) {
+    __extends(UserNotFoundError, _super);
     // callback with a custom error object
     //let getError = cb => cb(new AuthorizationError('there was a problem'))
     // get the error and log the stack trace
     //getError((err) => console.log(err));
-    function AuthorizationError() {
+    function UserNotFoundError() {
         var _this = _super.call(this) || this;
-        _this.customType = "AuthorizationError";
+        _this.customType = "UserNotFoundError";
         //Object.setPrototypeOf(this, Object.getPrototypeOf(this));
-        _this.name = 'AuthorizationError';
-        Error.captureStackTrace(_this, AuthorizationError);
+        _this.name = 'UserNotFoundError';
+        Error.captureStackTrace(_this, UserNotFoundError);
         return _this;
     }
     /*
@@ -27,10 +27,10 @@ var AuthorizationError = (function (_super) {
         Error.captureStackTrace(this, AuthorizationError);
       }
       */
-    AuthorizationError.prototype.toString = function () {
-        return 'yess !!! You are not authorized to view this content!!!';
+    UserNotFoundError.prototype.toString = function () {
+        return 'User Not Found Error';
     };
-    return AuthorizationError;
+    return UserNotFoundError;
 }(Error));
-exports.AuthorizationError = AuthorizationError;
-//# sourceMappingURL=AuthorizationError.js.map
+exports.UserNotFoundError = UserNotFoundError;
+//# sourceMappingURL=UserNotFoundError.js.map

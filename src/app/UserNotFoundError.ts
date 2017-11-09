@@ -1,7 +1,7 @@
-export class AuthorizationError extends Error{
+export class UserNotFoundError extends Error{
 
 
-  customType = "AuthorizationError";
+  customType = "UserNotFoundError";
   // callback with a custom error object
   //let getError = cb => cb(new AuthorizationError('there was a problem'))
 
@@ -12,8 +12,8 @@ export class AuthorizationError extends Error{
   constructor() {
     super();
     //Object.setPrototypeOf(this, Object.getPrototypeOf(this));
-    this.name = 'AuthorizationError';
-    Error.captureStackTrace(this, AuthorizationError);
+    this.name = 'UserNotFoundError';
+    Error.captureStackTrace(this, UserNotFoundError);
   }
 /*
   constructor(message) {
@@ -25,7 +25,7 @@ export class AuthorizationError extends Error{
   }
   */
   toString() {
-    return 'yess !!! You are not authorized to view this content!!!';
+    return 'User Not Found Error';
   }
 
 }
